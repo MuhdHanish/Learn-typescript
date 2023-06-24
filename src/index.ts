@@ -3,7 +3,7 @@ let course = 'TypeScript';
 let is_published = true;
 let level;
 
-
-function render(document) {
+// when we dont know what kind of type in compile time"
+function render(document:any) {
  console.log(document);
 }
