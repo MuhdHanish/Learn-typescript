@@ -1,4 +1,3 @@
 "use strict";
-let array = [1, 2, '3'];
-console.log(array);
+let user = [1, 'string'];
 //# sourceMappingURL=index.js.map
