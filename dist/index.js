@@ -1,5 +1,6 @@
 "use strict";
-;
-let mySize = 2;
-console.log(mySize);
+let employee = { id: 1, name: 'hanish', retire: (date) => {
+        console.log(date);
+    } };
+console.log(employee);
 //# sourceMappingURL=index.js.map
