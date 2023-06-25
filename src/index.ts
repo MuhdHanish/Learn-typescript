@@ -1,22 +1,24 @@
 class Account {
   readonly id: number;
   owner: string;
-  balance: number;
+  private _balance: number;
   nickName?: string;
   constructor(id:number,owner:string,balance:number) {
     this.id = id;
     this.owner = owner;
-    this.balance = balance;
+    this._balance = balance;
   }
   deposit(amount: number): void{
     if (amount <= 0) {
       throw new Error('invalid amount');
     }
-    this.balance += amount; 
+    // Record a transaction
+    this._balance += amount; 
+  }
+  getBalance(): number{
+    return this._balance;
   }
 }
 
-let account = new Account(1, 'Hanish', 0);
-account.nickName = 'muhdhanish';
-account.deposit(100);
-console.log(account.nickName);
+let account = new Account(1, 'Hanish', 10);
+console.log(account.getBalance())
