@@ -1,6 +1,4 @@
-let speed: number | null = null;
-let ride = {
-  // Falsy (undefined,null,'',false,0)
-  // Nullish coalescing operator
-  speed: speed ?? 30
-}
+let phone = <HTMLInputElement> document.getElementById('phone');
+// html element
+// html input element
+phone.value
