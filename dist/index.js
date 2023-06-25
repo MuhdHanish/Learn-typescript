@@ -13,6 +13,7 @@ class Account {
     }
 }
 let account = new Account(1, 'Hanish', 0);
+account.nickName = 'muhdhanish';
 account.deposit(100);
-console.log(account instanceof Account);
+console.log(account.nickName);
 //# sourceMappingURL=index.js.map
