@@ -1,9 +1,13 @@
-function render(document: unknown) {
-  if (typeof document === 'string') {
-    document.toUpperCase();
+
+function reject(message: string): never {
+  throw new Error(message);
+}
+function processEvents():never {
+  while (true) {
+    
   }
-  document.move();
-  document.fly();
-  document.whateverWeWant();
 }
 
+
+reject('...')
+console.log('Hello world');
