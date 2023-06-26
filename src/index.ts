@@ -5,7 +5,7 @@ class Person{
   get fullName() {
     return this.firstName + ' ' + this.lastName;
   }
-  walk() {
+  protected walk() {
     console.log('walking');
   }
 }
@@ -17,6 +17,7 @@ class Student extends Person {
     super(firstName, lastName);
   }
   takeTest() {
+    this.walk()
     console.log('taking test')
   }
 }
