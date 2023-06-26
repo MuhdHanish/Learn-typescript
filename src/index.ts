@@ -1,26 +1,13 @@
-interface Result<T> {
-  data: T | null,
-  error: string | null
+class Person {
+  constructor(public name:string){ }
 }
 
-function fetch<T>(url: string): Result<T>{
-  console.log(url)
-  return {
-    data: null,
-    error:null
-  }
+class Customer extends Person{
+
 }
 
-interface User {
-  username: string
+function echo<T extends Person>(value: T): T{
+  return value;
 }
 
-interface Product {
-  title: string
-}
-
-let username = fetch<User>('url');
-username.data?.username;
-
-let product = fetch<Product>('url');
-product.data?.title;
+echo(new Customer('a'));
