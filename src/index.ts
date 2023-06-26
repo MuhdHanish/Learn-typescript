@@ -1,10 +1,7 @@
-class KeyValuePair <K,V> {
-  constructor(
-    public key: K,
-    public value: V) { }
+class ArrayUtils {
+  static wrapInArray<T>(value: T) {
+    return [value]
+  }
 }
 
-let pair = new KeyValuePair<number, string>(10, 'a');
-let sec = new KeyValuePair<string, string>('1', "a");
-pair.key;
-sec.key;
+let arr = ArrayUtils.wrapInArray(1)
