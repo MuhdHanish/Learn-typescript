@@ -21,4 +21,11 @@ class Student extends Person {
   }
 }
 
-const student1 = new Student(1, 'muhammed', 'hanish');
+class Teacher extends Person {
+  override get fullName() {
+    return 'Professor ' + super.fullName
+  }
+}
+
+const teacher = new Teacher('jhon', 'smith');
+console.log(teacher.fullName)
