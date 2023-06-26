@@ -6,5 +6,5 @@ class KeyValuePair <K,V> {
 
 let pair = new KeyValuePair<number, string>(10, 'a');
 let sec = new KeyValuePair<string, string>('1', "a");
-pair.key
-sec.key
+pair.key;
+sec.key;
