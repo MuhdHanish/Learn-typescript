@@ -1,25 +1,10 @@
-// abstract class Calender {
-//   constructor(public name: string) { }
-//   abstract addEvent(): void;
-//   abstract removeEvent(): void;
-// }
-
-interface Calender {
-  name: string,
-  addEvent(): void;
-  removeEvent(): void;
+class KeyValuePair <K,V> {
+  constructor(
+    public key: K,
+    public value: V) { }
 }
 
-interface CloudCalender extends Calender {
-  sync(): void;
-}
-
-class GoogleCalender implements Calender {
-  constructor(public name:string){}
-  addEvent(): void {
-    throw new Error("Method not implemented.");
-  }
-  removeEvent(): void {
-    throw new Error("Method not implemented.");
-  }
-}
+let pair = new KeyValuePair<number, string>(10, 'a');
+let sec = new KeyValuePair<string, string>('1', "a");
+pair.key
+sec.key
