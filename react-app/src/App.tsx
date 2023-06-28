@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import ReminderList from './components/ReminderList';
 import Reminder from './models/Reminder';
 import reminderService from './services/reminder';
+import NewReminder from './components/NewReminder';
 
 function App() {
   const [reminders, setReminders] = useState<Reminder[]>([]);
@@ -15,10 +15,15 @@ function App() {
     loadReminders();
   }, []);
   const removeReminder = (id: number) => {
-    console.log(id);
+    setReminders(reminders.filter(reminder=>reminder.id!==id))
+  }
+  const addReminder = async (title: string) => {
+   const NewReminder = await reminderService.addReminder(title);
+    setReminders([NewReminder, ...reminders])
   }
   return (
     <div className="App">
+      <NewReminder onAddReminder={ addReminder } />
       <ReminderList items={reminders} onRemoveReminder={removeReminder} />
     </div>
   );
